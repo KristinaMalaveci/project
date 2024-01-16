@@ -1,0 +1,31 @@
+{% extends 'base/index.html' %}
+{% block title %} contact title {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Contact</h1>
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"  class="form-control" id="email" name="emailField">
+          </div>
+          <div class="mb-3">
+            <label for="fName" class="form-label">First Name</label>
+            <input type="text"  class="form-control" id="fName" name="nameField">
+          </div>
+          <div class="mb-3">
+            <label for="lName" class="form-label">last Name</label>
+            <input type="text"  class="form-control" id="lName" name="lastField">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">coment</label>
+            <textarea class="form-control" id="message" name="messageField" row="3">
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </fieldset>
+      </form>
+
+</div>
+
+
+{%  endblock %}

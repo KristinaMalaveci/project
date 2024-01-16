@@ -1,0 +1,11 @@
+{% extends 'base/index.html' %}
+
+{% block title %} Profile Page {% endblock %}
+
+{% block content %}
+    <h1>Profile: {{profile.staff_name}} {{profile.staff_surname}}</h1>
+    <p>Position: {{profile.staff_position}}</p>
+    <p>Position: {{profile.staff_email}}</p>
+    <img src="{{profile.staff_image.url}}" alt="" class="img-fluid"
+ 
+{% endblock %}

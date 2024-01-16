@@ -1,0 +1,25 @@
+{% extends 'base/index.html' %}
+{% block title %} About title {% endblock %}
+{%  block content %}
+
+<h1>About page</h1>
+<div class="container">
+    <div class="row">
+        {% for s in allStaff %}
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card" >
+                <img src="{{s.staff_image.url}}" class="card-img-top h-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{s.staff_name}} {{s.staff_surname}}</h5>
+                  <p class="card-text">{{s.staff_position}}</p>
+                  <p class="card-text">{{s.staff_email}}</p>
+                  <a href="{% url 'profilePage' s.pk %}" class="btn btn-primary">Profile</a>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+        </div>
+        
+</div>
+{% endblock %}
+
