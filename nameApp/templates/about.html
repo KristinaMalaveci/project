@@ -19,7 +19,25 @@
         </div>
         {% endfor %}
         </div>
-        
+
+        <table border="2">
+          <tr>
+            <th> Name </th>
+            <th> Surname </th>
+            <th> Comment </th>
+            <th> Email </th>
+          </tr>
+
+{% for c in infoContact %}
+<tr>
+  <td>{{c.contact_name}}</td>
+  <td>{{c.contact_surname}}</td>
+  <td> {{c.contact_comment}}</td>
+  <td>{{c.contact_email}}</td>
+</tr>
+{% endfor %}
+        </table>
+
 </div>
 {% endblock %}
 
